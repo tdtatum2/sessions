@@ -101,13 +101,13 @@
                 <td><p><?php echo $item['type'] ?></p></td>
                 <td><p><?php echo $item['class'] ?></p></td>
                 <td><p class="money"><?php echo $item['price'] ?></p></td>
-                <!-- <td>
+                <td>
                     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST" id="delete_item">
                         <input type="hidden" name="vehicleID" id="vehicleID" value="<?php echo $item['vehicleID']; ?>">
                         <button class="btn waves-effect waves-light" type="submit" name="action" value="delete_item">
                             <i class="large material-icons ">cancel</i>  
                     </form>
-                </td> -->
+                </td>
             </tr>
         <?php endforeach ; ?>
     </tbody>
@@ -115,4 +115,21 @@
 
     </ul>
 </table>
+
+<div class="row">
+    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" id="admin">
+        <button class="col s6 m3 l1 btn waves-effect waves-light" type="submit" name="action" value="add_vehicle_form">
+            Add a Vehicle
+        </button>
+        <button class="col s6 m3 l1 offset-l1 btn waves-effect waves-light" type="submit" name="action" value="edit_makes_form">
+            Edit Makes
+        </button>
+        <button class="col s6 m3 l1 offset-l1 btn waves-effect waves-light" type="submit" name="action" value="edit_types_form">
+            Edit Types
+        </button>
+        <button class="col s6 m3 l1 offset-l1 btn waves-effect waves-light" type="submit" name="action" value="edit_classes_form">
+            Edit Classes
+        </button>
+    </form>
+</div>
 <?php include('footer.php'); ?>
