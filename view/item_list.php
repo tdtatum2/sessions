@@ -101,13 +101,6 @@
                 <td><p><?php echo $item['type'] ?></p></td>
                 <td><p><?php echo $item['class'] ?></p></td>
                 <td><p class="money"><?php echo $item['price'] ?></p></td>
-                <!-- <td>
-                    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST" id="delete_item">
-                        <input type="hidden" name="vehicleID" id="vehicleID" value="<?php echo $item['vehicleID']; ?>">
-                        <button class="btn waves-effect waves-light" type="submit" name="action" value="delete_item">
-                            <i class="large material-icons ">cancel</i>  
-                    </form>
-                </td> -->
             </tr>
         <?php endforeach ; ?>
     </tbody>
