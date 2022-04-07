@@ -34,5 +34,28 @@
         <li class="collection-header">
             <h4>Zippy's Used Autos</h4>
         </li>
+        <?php if($action != 'register' && !isset($_SESSION['userid'])) { ?>
+            <li class="collection-item">
+                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" id="register">
+                    <button class="col s6 m3 l1 btn waves-effect waves-light" type="submit" name="action" value="register">
+                        Register
+                    </button>
+                </form>
+            </li>
+        <?php } elseif(isset($_SESSION['userid']) && $action != 'register' && $action != 'logout') { ?>
+            <li class="collection-item">
+                <div class="row">
+                    <h4>
+                        Welcome, <?php echo $_SESSION['userid']; ?>
+                    </h4>
+                </div>
+                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" id="logout">
+                    <button class="btn waves-effect waves-light" type="submit" name="action" value="logout">
+                        Log Out
+                    </button>
+                </form>
+            </li>
+        <?php } ?>
+
     </ul>
     </div>
